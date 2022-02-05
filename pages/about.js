@@ -1,11 +1,10 @@
-import NavBar from "../components/navBar";
+import Seo from "../components/Seo";
 
 export default function Tomato() {
-    return (
+  return (
     <div>
-        <NavBar />
-        <h1>About tomato!</h1>
+      <Seo title="About" />
+      <h1>About tomato!</h1>
     </div>
-    )
-  
+  );
 }
