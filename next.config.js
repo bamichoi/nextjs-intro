@@ -5,17 +5,21 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/contact/:path*",
-        destination: "/form/:path*",
+        source: "/old-blog/:path*",
+        destination: "/new-sexy-blog/:path*",
         permanent: false,
       },
     ];
   },
-  async rewrite() {
+  async rewrites() {
     return [
       {
         source: "/api/movies",
         destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
+      },
+      {
+        source: "/api/movies/:id",
+        destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}`,
       },
     ];
   },
